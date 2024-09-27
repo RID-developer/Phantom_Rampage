@@ -1,0 +1,11 @@
+./battle/Evade.java
+./input/Console.java
+./input/Fscan.java
+./enemy/Rat.java
+./enemy/Stats.java
+./Game.java
+./utils/Rand.java
+./utils/Time.java
+./graphics/Control.java
+./graphics/Graphics_Manager.java
+./graphics/Menu.java

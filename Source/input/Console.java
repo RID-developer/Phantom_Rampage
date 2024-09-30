@@ -16,9 +16,7 @@ public class Console
     public static void clear(boolean all)
     {
         try{
-            buff.read(null,0,System.in.available()-1);
-            if (all)
-            buff.read();
+            buff.readLine();
         }catch (IOException e)
         {
             System.out.println("Error " + e.getMessage());

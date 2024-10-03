@@ -1,9 +1,10 @@
 package input;
 import java.io.*;
-public class Console
+import java.util.*;
+public class Terminal
 {
     static BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
-    public static int byteRead()
+    public static char byteRead()
     {
         int in = 0;
         try{
@@ -11,11 +12,23 @@ public class Console
         }catch (IOException e) {
             System.out.println("Error " + e.getMessage());
         }
-        return in;
+        return (char)in;
     }
-    public static void clear(boolean all)
+    public static int scanInt()
+    {
+    //try{
+    Scanner sc = new Scanner(System.in);
+    int x = sc.nextInt();
+    return x;
+    //}catch (IOException e)
+    //{
+    //return 0;
+    //}
+    }
+    public static void clear()
     {
         try{
+            while(System.in.available()>0)
             buff.readLine();
         }catch (IOException e)
         {

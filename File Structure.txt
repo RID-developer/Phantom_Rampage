@@ -1,0 +1,25 @@
+In the "Global": lines
+0 Wether the game is active
+1 round
+2 dodge time
+3 dodge length
+4 deck card card card ...
+"Enemy"
+0 name (id)
+1 hp maxhp
+2 shield maxshield
+3 armor
+"cards"
+0 draw card card card ...
+1 ready card card card ...
+2 discard card card card ...
+3 exhaust card card card ...
+"status"
+0 id stack
+1 id stack
+2 id stack
+...
+"relics"
+0 id stack
+1 id stack
+2 id stack

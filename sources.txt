@@ -1,8 +1,0 @@
-./source/battle/Evade.java
-./source/input/Input.java
-./source/Game.java
-./source/utils/Rand.java
-./source/utils/Time.java
-./source/graphics/Control.java
-./source/graphics/Graphics_Manager.java
-./source/graphics/Menu.java

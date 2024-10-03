@@ -1,5 +1,5 @@
 package graphics;
-class Control{
+public class Control{
     public static void refresh()
     {
         System.out.print("\033[H\033[2J"); 

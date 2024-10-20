@@ -18,7 +18,7 @@ public class Relic
     public static void evasion()
     {
     int buff = Fscan.readWide(5,1,1,2);
-    buff = buff * 5;
+    buff = buff * 2;
     buff = buff + Fscan.readLine(1,2,0);
     Fscan.insertLine(1,buff,2,0);
     buff = Fscan.readWide(5,2,1,2);
@@ -31,7 +31,7 @@ public class Relic
     {
     one = "Power";
     two = "Time";
-    if (Rand.intIn()%20 == 0)
+    if (Rand.intIn()%10 == 0)
     three = "Length";
     else
     three = "Unavailable";

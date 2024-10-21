@@ -5,37 +5,44 @@ public class Fscan{
     static RandomAccessFile file = null;
     static BufferedReader sc = null;
     static File f = null;
-    public static void set(int x) throws FileNotFoundException
-    {
-    switch (x){
-    case 1: file = new RandomAccessFile("Global","rw");
-    sc = new BufferedReader(new FileReader("Global"));
-    f = new File("Global");
-    break;
-    case 2:
-    file = new RandomAccessFile("Enemy","rw");
-    sc = new BufferedReader(new FileReader("Enemy"));
-    f = new File("Enemy");
-    break;
-    case 3:
-    file = new RandomAccessFile("Cards","rw");
-    sc = new BufferedReader(new FileReader("Cards"));
-    f = new File("Cards");
-    break;
-    case 4:
-    file = new RandomAccessFile("Status","rw");
-    sc = new BufferedReader(new FileReader("Status"));
-    f = new File("Status");
-    break;
-    case 5:
-    file = new RandomAccessFile("Relics","rw");
-    sc = new BufferedReader(new FileReader("Relics"));
-    f = new File("Relics");
-    break;
-    default:
-    file = null;
+    public static void set(int x) throws FileNotFoundException {
+    String dir = System.getProperty("user.dir") + "/run";
+
+    File run = new File(dir);
+    if (!run.exists()) {
+        run.mkdir();
     }
+    switch (x) {
+        case 1:
+            file = new RandomAccessFile(dir + "/Global", "rw");
+            sc = new BufferedReader(new FileReader(dir + "/Global"));
+            f = new File(dir + "/Global");
+            break;
+        case 2:
+            file = new RandomAccessFile(dir + "/Enemy", "rw");
+            sc = new BufferedReader(new FileReader(dir + "/Enemy"));
+            f = new File(dir + "/Enemy");
+            break;
+        case 3:
+            file = new RandomAccessFile(dir + "/Cards", "rw");
+            sc = new BufferedReader(new FileReader(dir + "/Cards"));
+            f = new File(dir + "/Cards");
+            break;
+        case 4:
+            file = new RandomAccessFile(dir + "/Status", "rw");
+            sc = new BufferedReader(new FileReader(dir + "/Status"));
+            f = new File(dir + "/Status");
+            break;
+        case 5:
+            file = new RandomAccessFile(dir + "/Relics", "rw");
+            sc = new BufferedReader(new FileReader(dir + "/Relics"));
+            f = new File(dir + "/Relics");
+            break;
+        default:
+            file = null;
     }
+}
+
     public static void line(int x)
     {   try{
         int i = 0;

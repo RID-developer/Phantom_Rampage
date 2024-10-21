@@ -8,20 +8,15 @@ public class Game{
 
     public static void main(String[] args)
     {
-        start();
+        start(args);
     }
-    private static void start()
+    private static void start(String[] args)
     {
+        Ui.begin(args);
         while(true)
         {
-        Menu.instructions();
-        Terminal.byteRead();
-        Control.refresh();
+
         run();
-        System.out.println("Game over");
-        Menu.instructions();
-        Terminal.byteRead();
-        Control.refresh();
         }
     }
     private static void run()
@@ -40,8 +35,6 @@ public class Game{
     R.nextRound();
     while(Fscan.readLine(2,1,0) > 0 && t == 1)
     {
-    Time.pause(1000);
-    Graphics_Manager.run();
     System.out.println(Fscan.readLine(2,1,0));
     t = Evade.round();
     R.damage();

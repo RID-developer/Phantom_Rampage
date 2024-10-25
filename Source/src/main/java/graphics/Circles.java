@@ -25,7 +25,7 @@ public class Circles
     obs[i].setCenterX(x);
     obs[i].setCenterY(y);
     obs[i].setRadius(r);
-    obs[i].setFill(Color.web("#ffffff"));
+    obs[i].setFill(Color.web("#ff3300"));
     pane.getChildren().add(obs[i]);
     i++;
     }

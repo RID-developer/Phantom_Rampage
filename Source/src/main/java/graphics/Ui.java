@@ -20,7 +20,7 @@ public class Ui extends Application{
     pane.setPrefSize(1920, 1080);
     pane.setStyle("-fx-background-color: #000000;");
     Scene scene = new Scene(pane, 1920, 1080);
-    Click.click(Screens::start,"begin",180,100,810,400);
+    Screens.start();
     Key.initiate(scene);
     stage.setScene(scene);
     stage.setTitle("Phantom_Rampage");

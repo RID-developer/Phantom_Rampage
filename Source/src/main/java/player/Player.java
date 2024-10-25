@@ -14,7 +14,9 @@ public class Player
     double y = 540;
     public Player()
     {
+    Ui.pane.getChildren().remove(player);
     player = Circles.circle(x,y,16);
+    player.setFill(Color.web("#0099ff"));
     }
     public boolean wallCol()
     {

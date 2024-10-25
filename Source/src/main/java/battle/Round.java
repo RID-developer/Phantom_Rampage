@@ -19,6 +19,7 @@ public class Round
     Fscan.insertLine(2,ID,0,0);
     round = Fscan.readLine(1,1,0);
     Fscan.insertLine(1,round + 1,1,0);
+    Fscan.insertLine(1,1000+round*20,3,0);
     Evade.update();
     Enemy.spawn();
     }

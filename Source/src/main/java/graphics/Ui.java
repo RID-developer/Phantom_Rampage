@@ -9,20 +9,19 @@ import javafx.scene.paint.*;
 import javafx.scene.shape.*;
 import javafx.stage.*;
 import javafx.geometry.*;
+import javafx.event.*;
+import runtime.*;
+import input.*;
 public class Ui extends Application{
-    static Label label = null;
+    public static Pane pane = new Pane();
     @Override
     public void start(Stage stage)
     {
-    Pane pane = new Pane();
     pane.setPrefSize(1920, 1080);
-    pane.setStyle("-fx-background-color: black;");
-    Click.click(Ui::text,"Click me",pane,100,200,800,500);
-    label = new Label();
-    label.setLayoutX(300);
-    label.setLayoutY(150);
-    pane.getChildren().add(label);
+    pane.setStyle("-fx-background-color: #000000;");
     Scene scene = new Scene(pane, 1920, 1080);
+    Click.click(Screens::start,"begin",180,100,810,400);
+    Key.initiate(scene);
     stage.setScene(scene);
     stage.setTitle("Phantom_Rampage");
     stage.show();
@@ -30,10 +29,5 @@ public class Ui extends Application{
     public static void begin(String[] args)
     {
     launch(args);
-    }
-    public static void text()
-    {
-    label.setText("Success");
-
     }
 }

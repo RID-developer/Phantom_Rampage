@@ -13,7 +13,7 @@ public class Rand {
     }
     public static int intIn()
     {
-        int x = R.nextInt(256);
+        int x = R.nextInt(2048);
         return x;
     }
 }
